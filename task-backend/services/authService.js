@@ -36,6 +36,7 @@ const getUser = async (userInfo) => {
         }
 
         const token = jwt.sign({id:user._id},process.env.JWT_SECRET);
+        console.log(token);
         return {token,user};
 
     } 
